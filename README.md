@@ -27,23 +27,23 @@ Unit Testing with Mockito & JUnit
 3. Import the project as a Maven project.
 4. Run the application using the Spring Boot plugin or the following command:
    - mvn spring-boot:run
-5. The application will start on port 8090.
+5. The application will start on port 8080.
 
 
 ## Usage
 The application exposes the following endpoints:
 
-http://localhost:8090/swagger-ui/index.html#/
+http://localhost:8080/swagger-ui/index.html#/
 
-curl -X POST "http://localhost:8090/notifications/game?userId=1&eventType=levelUp&param=20"
+curl -X POST "http://localhost:8080/notifications/game?userId=1&eventType=levelUp&param=20"
 Simulating Item Acquired Event
 
-curl -X POST "http://localhost:8090/notifications/game?userId=2&eventType=itemAcquired&param=Excalibur"
+curl -X POST "http://localhost:8080/notifications/game?userId=2&eventType=itemAcquired&param=Excalibur"
 Simulating Friend Request Sent
 
-curl -X POST "http://localhost:8090/notifications/social?userId1=3&userId2=1&eventType=friendRequestSent"
+curl -X POST "http://localhost:8080/notifications/social?userId1=3&userId2=1&eventType=friendRequestSent"
 Simulating Friend Request Accepted
-curl -X POST "http://localhost:8090/notifications/social?userId1=1&userId2=3&eventType=friendRequestAccepted"
+curl -X POST "http://localhost:8080/notifications/social?userId1=1&userId2=3&eventType=friendRequestAccepted"
 
 
 

@@ -18,7 +18,7 @@ RUN apt-get update && apt-get install -y \
     && rm -rf /var/lib/apt/lists/*
   
   # Expose the port the application runs on
-EXPOSE 8090
+EXPOSE 8080
 
 # Copiar el archivo JAR construido desde la etapa anterior
 COPY --from=build /app/target/apiGaming-0.0.1-SNAPSHOT.jar /app/apiGaming-0.0.1-SNAPSHOT.jar
