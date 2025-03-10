@@ -1,22 +1,23 @@
-# fly.toml app configuration file generated for fintrackapp on 2024-12-21T16:22:08Z
+# fly.toml app configuration file generated for heliostest on 2025-03-10T00:50:06Z
 #
 # See https://fly.io/docs/reference/configuration/ for information about how to use this file.
 #
 
-app = "heliostest"
-primary_region = "bog"
+app = 'heliostest'
+primary_region = 'bog'
 
 [build]
 
 [http_service]
-internal_port = 8080
-force_https = true
-auto_stop_machines = false
-auto_start_machines = true
-min_machines_running = 1
-processes = ["app"]
+  internal_port = 8080
+  force_https = true
+  auto_stop_machines = 'stop'
+  auto_start_machines = true
+  min_machines_running = 0
+  processes = ['app']
 
 [[vm]]
-memory = "512mb"
-cpu_kind = "shared"
-cpus = 1
+  memory = '512mb'
+  cpu_kind = 'shared'
+  cpus = 1
+  memory_mb = 512
